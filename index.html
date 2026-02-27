@@ -796,7 +796,7 @@
                     <Modal isOpen={!!detailMember} title={`${detailMember?.name} 선수 이력`} onClose={() => setDetailMember(null)}>
                         {detailMember && (
                             <div className="space-y-1">
-                                <div className="grid grid-cols-4 gap-2">
+                                <div className="grid grid-cols-3 gap-2">
                                     {(() => {
                                         const advStats = getAdvancedStats(detailMember.id);
                                         return (
@@ -804,10 +804,6 @@
                                                 <div className="bg-rose-50 p-2 rounded-xl border border-gray-100 text-center">
                                                     <div className="text-[9px] text-gray-400 font-bold uppercase">win rate</div>
                                                     <div className="text-sm font-black text-slate-700 mt-0.5">{getMemberStats(detailMember.id).winRate.toFixed(1)}%</div>
-                                                </div>
-                                                <div className="bg-grey-50 p-2 rounded-xl border border-gray-100 text-center">
-                                                    <div className="text-[9px] text-gray-400 font-bold uppercase">내 파트너 평균</div>
-                                                    <div className="text-sm font-black text-slate-700 mt-0.5">{advStats.partnerAvg.toFixed(3)}</div>
                                                 </div>
                                                 <div className="bg-green-50 p-2 rounded-xl border border-gray-100 text-center">
                                                     <div className="text-[9px] text-gray-400 font-bold uppercase">내팀 평균</div>
